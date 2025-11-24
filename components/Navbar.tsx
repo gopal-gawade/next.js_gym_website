@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { Oswald } from "next/font/google";
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { UserButton, useUser } from '@clerk/nextjs';
 
 const oswald = Oswald({
   weight: "400",
@@ -13,6 +15,8 @@ const oswald = Oswald({
 export default function Navbar() {
   const [show, setShow] = useState<boolean>(false);
   const [navbar, setNavbar] = useState<boolean>(false);
+  const path = usePathname();
+  const { isSignedIn, user } = useUser();
 
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setNavbar(true) : setNavbar(false);
@@ -42,16 +46,34 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden md:flex md:flex-row items-center justify-end md:gap-4 lg:gap-8 text-md sm:text-lg">
-          {navLinks.map((navLink, i) => (
-            <li
-              key={i}
-              className={`transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] ${!navbar ? "hover:text-[#e63946]" : "hover:text-[#1c1c1c]"}`}
-            >
-              <Link href={navLink.link} className="h-12">
-                {navLink.name}
-              </Link>
-            </li>
-          ))}
+          {path === '/admin' ?
+            <>
+              <li className={`transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] ${!navbar ? "hover:text-[#e63946]" : "hover:text-[#1c1c1c]"}`}>
+                {isSignedIn && (
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm sm:text-md hidden sm:block">
+                      Welcome,{" "}
+                      {user.firstName ?? user.emailAddresses[0].emailAddress}
+                    </span>
+
+                    <UserButton />
+                  </div>
+                )}
+              </li>
+            </> :
+            <>
+              {navLinks.map((navLink, i) => (
+                <li
+                  key={i}
+                  className={`transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] ${!navbar ? "hover:text-[#e63946]" : "hover:text-[#1c1c1c]"}`}
+                >
+                  <Link href={navLink.link} className="h-12">
+                    {navLink.name}
+                  </Link>
+                </li>
+              ))}
+            </>
+          }
         </ul>
 
         <div
@@ -75,16 +97,34 @@ export default function Navbar() {
             </div>
           </li>
 
-          {navLinks.map((navLink, i) => (
-            <li
-              key={i}
-              className="transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] hover:text-[#1c1c1c]"
-            >
-              <Link href={navLink.link} className="h-12">
-                {navLink.name}
-              </Link>
-            </li>
-          ))}
+          {path === '/admin' ?
+            <>
+              <li className={`transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] ${!navbar ? "hover:text-[#e63946]" : "hover:text-[#1c1c1c]"}`}>
+                {isSignedIn && (
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm sm:text-md hidden sm:block">
+                      Welcome,{" "}
+                      {user.firstName ?? user.emailAddresses[0].emailAddress}
+                    </span>
+
+                    <UserButton />
+                  </div>
+                )}
+              </li>
+            </> :
+            <>
+              {navLinks.map((navLink, i) => (
+                <li
+                  key={i}
+                  className="transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] hover:text-[#1c1c1c]"
+                >
+                  <Link href={navLink.link} className="h-12">
+                    {navLink.name}
+                  </Link>
+                </li>
+              ))}
+            </>
+          }
         </ul>
       </div>
 

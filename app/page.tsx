@@ -1,3 +1,4 @@
+import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'
 import Info from '@/components/Info'
 import Trainer from '@/components/Trainer'
@@ -9,6 +10,7 @@ export default function HomePage() {
       <Hero />
       <Info />
       <Trainer />
+      <Gallery/>
     </div>
   )
 }

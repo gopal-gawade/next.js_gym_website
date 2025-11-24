@@ -2,6 +2,7 @@ import { FaYoutube, FaInstagramSquare } from "react-icons/fa";
 import { Oswald } from "next/font/google";
 import Link from "next/link";
 import React from "react";
+import {  SignInButton, SignOutButton} from '@clerk/nextjs';
 
 const oswald = Oswald({
   weight: "500",
@@ -57,6 +58,10 @@ export default function Footer() {
 
           <Link href="/pricing" className="hover:text-[#e63946] transition-all">
             Pricing
+          </Link>
+
+          <Link href="/sign-in" target="_blank" rel="noopener noreferrer" className="hover:text-[#e63946] transition-all">
+             Admin
           </Link>
         </div>
 

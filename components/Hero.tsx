@@ -1,7 +1,10 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Oswald } from "next/font/google";
 import { CalendarClock, Check, MapPin, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
 const oswald = Oswald({
   weight: "400",
@@ -9,6 +12,8 @@ const oswald = Oswald({
 });
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <div className="min-h-[80vh] w-full text-white container mx-auto mt-24 px-6 md:px-12 flex flex-col lg:flex-row items-stretch justify-between gap-2">
       <div className="w-full flex flex-1 flex-col justify-center">
@@ -20,7 +25,7 @@ export default function Hero() {
           Best Gym in Ratnagiri
           <br />
           <span className="text-[#e63946]">
-            Push Your Limits
+            Push Your Limits{" "}
           </span>
           Forward
         </h1>
@@ -51,7 +56,10 @@ export default function Hero() {
         </ul>
 
         <div className="mt-6">
-          <Button className="w-full lg:w-fit p-6 rounded-none cursor-pointer bg-[#e63946] text-white font-medium hover:bg-[#c92f3b] translate-y-0 transition-all duration-250 hover:translate-y-[-2px]">
+          <Button
+            onClick={() => router.push("/contactus")}
+            className="w-full lg:w-fit p-6 rounded-none cursor-pointer bg-[#e63946] text-white font-medium hover:bg-[#c92f3b] translate-y-0 transition-all duration-250 hover:translate-y-[-2px]"
+          >
             <span className="text-md md:text-lg">
               Become a Member
             </span>
@@ -111,7 +119,7 @@ export default function Hero() {
                   </h4>
 
                   <p className="text-sm text-gray-200">
-                    8:00am – 9:00pm
+                    8:00am - 9:00pm
                   </p>
                 </div>
               </div>

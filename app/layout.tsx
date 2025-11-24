@@ -5,7 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import Scroll from "@/components/Scroll";
-import AdModal from "@/components/AdModal";
+import { ClerkProvider } from "@clerk/nextjs";
+import Modal from "@/components/Modal";
 
 const inter = Inter({
   weight: "400",
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "HealthClub",
     name: "Lio Fit Fitness Centre",
-    url: "https://.com/",
+    url: "https://liofitgymratnagiri.space/",
     telephone: "+918390801842",
     address: {
       "@type": "PostalAddress",
@@ -79,37 +80,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Scroll />
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className} flex flex-col min-h-screen`}>
+          <Scroll />
 
-        <nav>
-          <Navbar />
-        </nav>
+          <nav>
+            <Navbar />
+          </nav>
 
-        <main style={{
-          backgroundImage: "url('/muscles-wallpaper-5120x2880.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
-          className="text-white flex-1 flex flex-col items-stretch">
-          {children}
-        </main>
+          <main style={{
+            backgroundImage: "url('/muscles-wallpaper-5120x2880.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+            className="text-white flex-1 flex flex-col items-stretch">
+            {children}
+          </main>
 
-        <footer>
-          <Footer />
-        </footer>
+          <footer>
+            <Footer />
+          </footer>
 
-        <AdModal />
+          <Modal />
 
-        <Script
-          id="healthclub-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-      </body>
-    </html>
+          <Script
+            id="healthclub-schema"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
