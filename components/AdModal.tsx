@@ -4,6 +4,12 @@ import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { usePathname } from "next/navigation";
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 interface Advertisement {
     id: string;
@@ -53,7 +59,7 @@ export default function AdModal({ ads }: { ads: Advertisement[] }) {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-            <Card className="relative w-full max-w-[600px] bg-white rounded-2xl shadow-2xl m-3 text-center">
+            <Card className="relative w-full max-w-[600px] bg-[linear-gradient(to_top,#1c1c1c_0%,#e63946_100%)] rounded-2xl shadow-2xl m-3 text-center">
                 <button
                     onClick={() => setShow(false)}
                     className="absolute cursor-pointer top-3 right-3 text-black hover:text-red-500"
@@ -61,7 +67,7 @@ export default function AdModal({ ads }: { ads: Advertisement[] }) {
                     <X />
                 </button>
 
-                <div className="text-3xl font-bold text-red-500 pt-6">
+                <div className={`${oswald.className} text-3xl font-bold text-white pt-6`}>
                     Special Offer!
                 </div>
 

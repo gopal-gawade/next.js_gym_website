@@ -262,7 +262,7 @@ html {
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    background: #FF3D00;
+    background: #e63946;
     animation: ballbns 2s linear infinite alternate;
 }
 .loader:after{
