@@ -135,103 +135,25 @@ html {
 }
 
 .gallery {
-    padding: 8px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-
-.gallery-new {
-    padding: 8px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-
-@media (max-width: 1536px) {
-    .gallery {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 16px;
-    }
-
-    .gallery-new {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .gallery {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
-
-    .gallery-new {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
+    column-count: 4;
+    column-gap: 20px;
+    padding: 10px;
 }
 
 @media (max-width: 1024px) {
-    .gallery {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-
-    .gallery-new {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-
-    .gallery-new {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
+  .gallery { column-count: 3; }
 }
 
 @media (max-width: 640px) {
-    .gallery {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .gallery-new {
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
+  .gallery { column-count: 1; }
 }
 
 .galleryItem {
     display: flex;
     position: relative;
     overflow: hidden;
+    break-inside: avoid;
+    margin-bottom: 20px;
 }
 
 .galleryItem img {

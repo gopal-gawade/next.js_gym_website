@@ -9,9 +9,9 @@ const oswald = Oswald({
 });
 
 const trainers = [
-    { name: 'Suraj Pandit', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Head / Owner', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." },
-    { name: 'Suraj Pandit', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Gym Trainer', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." },
-    { name: 'Suraj Pandit', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Gym Trainer', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." }
+    { name: 'Suraj Pandit', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Owner', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." },
+    { name: 'Suyog Topare', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Gym Trainer', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." },
+    { name: 'Vedant Pawaskar', image: '/muscles-wallpaper-5120x2880.jpg', position: 'Gym Trainer', description: "I'm passionate about helping you unlock your unique fitness potential through tailored training that prioritizes your health and empowers your goals." }
 ]
 
 export default function Trainer() {

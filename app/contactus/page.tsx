@@ -43,7 +43,7 @@ export default function ContactPage() {
                 📍 <span className="font-semibold text-white">
                     Om Sai Om Building
                 </span>
-                , Karwanchiwadi Road, Kasop, Ratnagiri, Maharashtra 415612
+                , Karwanchiwadi Road, near Gramin Police Station, Ratnagiri, Maharashtra 415612
             </p>
 
             <p className="text-lg text-gray-200">

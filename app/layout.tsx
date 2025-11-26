@@ -98,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className="text-white flex-1 flex flex-col items-stretch">
             {children}
           </main>
+          
 
           <footer>
             <Footer />
