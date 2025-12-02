@@ -35,7 +35,10 @@ export const metadata: Metadata = {
     siteName: "Lio Fit Fitness Centre",
     locale: "en_IN",
     type: "website",
-  }
+  },
+  verification: {
+    google: "t9dQ97iea4Hm2Ggk-3zZVETkMGElsE-7k8wibKCcpkY",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

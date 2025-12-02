@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://liofitgymratnagiri.netlify.app
+
+# Sitemaps
+Sitemap: https://liofitgymratnagiri.netlify.app/sitemap.xml
