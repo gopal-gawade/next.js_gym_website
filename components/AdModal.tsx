@@ -38,7 +38,7 @@ export default function AdModal({ ads }: { ads: Advertisement[] }) {
 
         const id = setInterval(() => {
             setCount(prev => (prev + 1) % ads.length);
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(id);
     }, [ads.length]);
@@ -48,14 +48,12 @@ export default function AdModal({ ads }: { ads: Advertisement[] }) {
 
         const timer = setTimeout(() => {
             setShow(false)
-        }, 20000);
+        }, ads.length*3000);
 
         return () => clearTimeout(timer);
     }, []);
 
     if (!show) return null;
-
-    console.log(ads)
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">

@@ -39,7 +39,7 @@ export default function Hero() {
         <ul className="mt-6 space-y-2 text-gray-200">
           <li className="flex gap-1">
             <Check className="text-green-500" />
-            4.8⭐ rating from 99+ members
+            4.9⭐ rating from 99+ members
           </li>
           <li className="flex gap-1">
             <Check className="text-green-500" />
@@ -97,9 +97,7 @@ export default function Hero() {
                   </h4>
 
                   <p className="text-sm text-gray-200">
-                    Near Garmin police station,
-                    Karwanchiwadi road,
-                    Ratnagiri
+                     Karwanchiwadi Road, near Gramin Police Station, Ratnagiri, Maharashtra 415612
                   </p>
                 </div>
               </div>
@@ -114,12 +112,14 @@ export default function Hero() {
                     <span>Open</span>
                     <br />
                     <span>
-                      Monday - Friday
+                      Monday - Saturday
                     </span>
                   </h4>
 
                   <p className="text-sm text-gray-200">
-                    8:00am - 9:00pm
+                    Morning: 6 AM - 12:30 PM
+                    <br/>
+                    Evening: 4 PM - 10 PM
                   </p>
                 </div>
               </div>

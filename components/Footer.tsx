@@ -2,7 +2,7 @@ import { FaYoutube, FaInstagramSquare } from "react-icons/fa";
 import { Oswald } from "next/font/google";
 import Link from "next/link";
 import React from "react";
-import {  SignInButton, SignOutButton} from '@clerk/nextjs';
+import { SignInButton, SignOutButton } from '@clerk/nextjs';
 
 const oswald = Oswald({
   weight: "500",
@@ -61,7 +61,7 @@ export default function Footer() {
           </Link>
 
           <Link href="/sign-in" target="_blank" rel="noopener noreferrer" className="hover:text-[#e63946] transition-all">
-             Admin
+            Admin
           </Link>
         </div>
 
@@ -99,9 +99,15 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-        <p>©2025 Lio Fit Gym. All rights reserved.</p>
-        <p>Designed & Created by Gopal Gawade</p>
+      <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-center text-gray-400">
+        <p>©2025 Lio Fit Gym Ratnagiri. All rights reserved.</p>
+        <p>
+          Designed & Created by Gopal Gawade
+          <br />
+          <span className="text-xs">
+            Background Photo by <a target="_blank" rel="noopener noreferrer" href="https://unsplash.com/@visualsbyroyalz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anastase Maragos</a> on <a href="https://unsplash.com/photos/topless-man-in-black-shorts-sitting-on-black-and-silver-barbell-9dzWZQWZMdE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </span>
+        </p>
       </div>
     </footer>
   );

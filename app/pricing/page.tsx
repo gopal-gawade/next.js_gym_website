@@ -7,10 +7,12 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Gym Membership Pricing – Lio Fit Fitness Centre Ratnagiri",
+  title: "Gym Membership Pricing - Lio Fit Fitness Centre Ratnagiri",
   description:
-    "Affordable gym membership plans in Ratnagiri. Choose monthly, quarterly, or annual packages with personal training add-ons at Lio Fit Fitness Centre.",
-  alternates: { canonical: "https:///pricing" },
+    "Discover affordable gym membership plans in Ratnagiri with exclusive discounts—buy 3 months and get 1 free, 6 months and get 2 free, or 1 year and get 3 free. Personal training add-ons available at Lio Fit Fitness Centre.",
+  alternates: {
+    canonical: "https://liofitgymratnagiri.netlify.app/pricing"
+  },
   keywords: [
     "gym membership Ratnagiri",
     "cheap gym Ratnagiri",
@@ -24,18 +26,13 @@ export default function PricingPage() {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     name: "Lio Fit Gym Membership Plans",
-    url: "https:///pricing",
-    itemListElement: [
-      { "@type": "Offer", name: "Monthly Membership", price: "1100", priceCurrency: "INR" },
-      { "@type": "Offer", name: "Quarterly Membership", price: "2499", priceCurrency: "INR" },
-      { "@type": "Offer", name: "Annual Membership", price: "7999", priceCurrency: "INR" }
-    ]
+    url: "https://liofitgymratnagiri.netlify.app/pricing",
   };
 
   return (
     <div className="container min-h-screen mx-auto px-6 md:px-12 py-30 flex flex-col gap-2 items-center justify-center text-white bg-black/70">
       <h1 className={`${oswald.className} text-4xl md:text-5xl font-extrabold uppercase mb-6 text-[#e63946] tracking-wide text-center`}>
-        Gym Membership Pricing – Lio Fit Gym Ratnagiri
+        Gym Membership Pricing - Lio Fit Gym Ratnagiri
       </h1>
 
       <p className="text-gray-200 text-lg leading-relaxed">
@@ -43,9 +40,9 @@ export default function PricingPage() {
       </p>
 
       <ul className="space-y-3 text-lg mb-2 font-medium text-white">
-        <li><strong>Monthly:</strong> ₹999 – Ideal for short-term goals</li>
-        <li><strong>Quarterly:</strong> ₹2499 – Best value for beginners</li>
-        <li><strong>Annual:</strong> ₹7999 – Transform your lifestyle</li>
+        <li>Buy <strong>3 months</strong> and get <strong>1 month</strong> free</li>
+        <li>Buy <strong>6 months</strong> and get <strong>2 months</strong> free</li>
+        <li>Buy <strong>1 year</strong> and get <strong>3 months</strong> free</li>
       </ul>
 
       <p className="text-gray-300 text-lg">

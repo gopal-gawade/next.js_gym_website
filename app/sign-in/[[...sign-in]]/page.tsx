@@ -1,4 +1,6 @@
-import { SignIn } from '@clerk/nextjs'
+"use client";
+
+import { SignIn } from '@clerk/nextjs';
 
 export default function Page() {
     return (
@@ -6,7 +8,19 @@ export default function Page() {
             <SignIn
                 routing="hash"
                 redirectUrl="/admin"
+                appearance={{
+                    elements: {
+                        footerAction: {
+                            display: "none",
+                        },
+                        card: {
+                            paddingBottom: "0px",
+                        },
+                    }
+                }}
             />
         </div>
-    )
+    );
 }
+
+//suyogtopare143@gmail.com

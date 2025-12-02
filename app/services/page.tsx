@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Gym Services - Strength, Cardio & Personal Training in Ratnagiri",
   description:
     "Explore Lio Fit Gym services in Ratnagiri: strength training, cardio, weight loss programs, bodybuilding, and expert personal training for all levels.",
-  alternates: { canonical: "https:///services" },
+  alternates: { canonical: "https://liofitgymratnagiri.netlify.app/services" },
   keywords: [
     "gym services Ratnagiri",
     "personal training Ratnagiri",
@@ -24,7 +24,7 @@ export default function ServicesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Gym and Fitness Training",
-    provider: { "@type": "HealthClub", name: "Lio Fit Fitness Centre", url: "https://.com" },
+    provider: { "@type": "HealthClub", name: "Lio Fit Fitness Centre", url: "https://liofitgymratnagiri.netlify.app/services" },
     areaServed: { "@type": "Place", name: "Ratnagiri, Maharashtra" },
     description:
       "Strength training, cardio, weight loss, bodybuilding, and personal training services at Lio Fit Gym Ratnagiri."
@@ -32,7 +32,7 @@ export default function ServicesPage() {
 
   return (
     <div className="container min-h-screen mx-auto px-6 md:px-12 py-30 flex flex-col gap-2 items-center justify-center text-white bg-black/70">
-       <h1 className={`${oswald.className} text-4xl md:text-5xl font-extrabold uppercase mb-6 text-[#e63946] tracking-wide text-center`}>
+      <h1 className={`${oswald.className} text-4xl md:text-5xl font-extrabold uppercase mb-6 text-[#e63946] tracking-wide text-center`}>
         Our Gym Services in Ratnagiri
       </h1>
 

@@ -41,12 +41,43 @@ export default function Advertisement(ads: {
         isActive: true,
     });
 
-    console.log(ads)
-
     const handleSubmit = async (form: Form) => {
+        if (!img?.secure_url) {
+            alert("Please upload an image.");
+            return;
+        }
+
+        if (!form.startDate) {
+            alert("Start date is required.");
+            return;
+        }
+
+        if (!form.endDate) {
+            alert("End date is required.");
+            return;
+        }
+
+        const start = new Date(form.startDate);
+        const end = new Date(form.endDate);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        start.setHours(0, 0, 0, 0);
+        end.setHours(0, 0, 0, 0);
+
+        if (start > end) {
+            alert("Start date cannot be after end date.");
+            return;
+        }
+
+        if (end < today) {
+            alert("End date must be today or a future date.");
+            return;
+        }
+
         try {
-            await addAd(form, img?.secure_url || "");
+            await addAd(form, img?.secure_url);
             alert("Advertisement created!");
+
             setForm({
                 photoUrl: "",
                 startDate: "",
@@ -58,7 +89,7 @@ export default function Advertisement(ads: {
         catch (err) {
             alert("Failed to create advertisement");
         }
-    }
+    };
 
     const deleteAdvertisement = async (id: string) => {
         try {
@@ -80,7 +111,7 @@ export default function Advertisement(ads: {
 
     return (
         <div>
-            <Card className="shadow-lg max-w-xl mx-auto transition-all duration-300 hover:shadow-[#e63946]/40">
+            <Card className="shadow-lg max-w-xl mx-auto mt-12 transition-all duration-300 hover:shadow-[#e63946]/40">
                 <CardHeader>
                     <CardTitle className={`${oswald.className} text-center text-2xl md:text-3xl font-bold text-black p-2`}>
                         Create Advertisement

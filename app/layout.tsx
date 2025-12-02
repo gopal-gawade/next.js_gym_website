@@ -14,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lio Fit Fitness Centre – Best Gym in Ratnagiri",
+  title: "Lio Fit Fitness Centre - Best Gym in Ratnagiri",
   description:
-    "Lio Fit Fitness Centre, Ratnagiri’s top-rated unisex gym. Modern equipment, certified trainers, personalized training, weight loss, and strength programs.",
+    "Lio Fit Fitness Centre, Ratnagiri's top-rated unisex gym. Modern equipment, certified trainers, personalized training, weight loss, and strength programs.",
   keywords: [
     "Best Gym in Ratnagiri",
     "Lio Fit Gym Ratnagiri",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     "Personal Training Ratnagiri",
   ],
   alternates: {
-    canonical: "https://.com/",
+    canonical: "https://liofitgymratnagiri.netlify.app/",
   },
   openGraph: {
     title: "Lio Fit Fitness Centre - Best Gym in Ratnagiri",
     description:
-      "Join Ratnagiri’s #1 gym for personal training, weight loss, strength, and cardio programs. Modern equipment and certified trainers available.",
-    url: "https://.com",
+      "Join Ratnagiri's #1 gym for personal training, weight loss, strength, and cardio programs. Modern equipment and certified trainers available.",
+    url: "https://liofitgymratnagiri.netlify.app/",
     siteName: "Lio Fit Fitness Centre",
     locale: "en_IN",
     type: "website",
@@ -43,11 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "HealthClub",
     name: "Lio Fit Fitness Centre",
-    url: "https://liofitgymratnagiri.space/",
+    url: "https://liofitgymratnagiri.netlify.app/",
     telephone: "+918390801842",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Near Garmin police station, Karwanchiwadi road, Ratnagiri",
+      streetAddress: "Near Garmin Police Station, Karwanchiwadi road, Ratnagiri",
       addressLocality: "Ratnagiri",
       addressRegion: "Maharashtra",
       postalCode: "415612",
@@ -63,15 +63,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
+          "Saturday"
         ],
         opens: "06:00",
-        closes: "22:00",
+        closes: "12:30"
       },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        opens: "16:00",
+        closes: "22:00"
+      }
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
+      ratingValue: "4.9",
       reviewCount: "99",
     },
     sameAs: [
@@ -98,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             className="text-white flex-1 flex flex-col items-stretch">
             {children}
           </main>
-          
+
 
           <footer>
             <Footer />

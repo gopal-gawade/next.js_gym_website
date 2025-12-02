@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { UserButton, useUser } from '@clerk/nextjs';
+import Image from 'next/image';
 
 const oswald = Oswald({
   weight: "400",
@@ -40,12 +41,17 @@ export default function Navbar() {
     <div className={`fixed z-20 w-full right-0 left-0 top-0 flex flex-row items-center justify-between transition-all duration-500 text-white ${navbar ? " bg-[#e63946] p-4 shadow-lg" : "bg-transparent backdrop-blur-xs p-6 shadow-sm"}`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className={`flex items-center justify-center gap-2 ${oswald.className} ${show ? "hidden" : "block"} md:block`}>
-          <Link href="/" className={`text-lg sm:text-3xl cursor-pointer`}>
-            Lio Fit
+          <Link href="/" className={`cursor-pointer`}>
+            <Image
+              src={'/logo.jpg'}
+              alt='Lio Fit'
+              height={150}
+              width={150}
+            />
           </Link>
         </div>
 
-        <ul className="hidden md:flex md:flex-row items-center justify-end md:gap-4 lg:gap-8 text-md sm:text-lg">
+        <ul className="hidden md:flex md:flex-row items-center justify-end md:gap-4 lg:gap-6 text-md sm:text-lg">
           {path === '/admin' ?
             <>
               <li className={`transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px] ${!navbar ? "hover:text-[#e63946]" : "hover:text-[#1c1c1c]"}`}>
@@ -92,7 +98,12 @@ export default function Navbar() {
           <li className="transform translate-y-0 transition-all duration-250 hover:translate-y-[-2px]">
             <div className={`flex items-center justify-center gap-2 ${oswald.className}`}>
               <Link href="/" className={`text-xl sm:text-2xl cursor-pointer`}>
-                Lio Fit
+                <Image
+                  src={'/logo.jpg'}
+                  alt='Lio Fit'
+                  height={150}
+                  width={150}
+                />
               </Link>
             </div>
           </li>

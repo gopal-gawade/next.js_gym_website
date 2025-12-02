@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "About Lio Fit Gym – Best Fitness Centre in Ratnagiri",
+  title: "About Lio Fit Gym - Best Fitness Centre in Ratnagiri",
   description:
-    "Learn more about Lio Fit Fitness Centre, Ratnagiri’s most trusted unisex gym. We help people achieve fitness goals with expert coaching and state-of-the-art facilities.",
-  alternates: { canonical: "https:///about" },
+    "Learn more about Lio Fit Fitness Centre, Ratnagiri's most trusted unisex gym. We help people achieve fitness goals with expert coaching and state-of-the-art facilities.",
+  alternates: { canonical: "https://liofitgymratnagiri.netlify.app/aboutus" },
   keywords: [
     "about Lio Fit Gym Ratnagiri",
     "best gym in Ratnagiri",
@@ -23,9 +23,9 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "About Lio Fit Gym",
-    url: "https:/about",
+    url: "https://liofitgymratnagiri.netlify.app/aboutus",
     description:
-      "About Lio Fit Fitness Centre, Ratnagiri’s most trusted gym for cardio, strength, and personal training.",
+      "About Lio Fit Fitness Centre, Ratnagiri's most trusted gym for cardio, strength, and personal training.",
   };
 
   return (
