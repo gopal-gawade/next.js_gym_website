@@ -12,10 +12,10 @@ const oswald = Oswald({
 export default function Footer() {
   return (
     <footer className="relative w-full bg-[#1c1c1c] text-white p-6 border-t border-white/10">
-      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="flex flex-col gap-2 items-center md:items-start">
           <h3 className={`${oswald.className} text-2xl font-bold tracking-wide`}>
-            Lio Fit
+            Lio-Fit Unisex Fitness Gym
           </h3>
 
           <p className="text-sm text-gray-300">
@@ -89,18 +89,18 @@ export default function Footer() {
           </h3>
 
           <a
-            href="mailto:suyogvilankar33@gmail.com"
+            href="mailto:panditsuraj259@gmail.com"
             className="hover:text-[#e63946] transition-all"
           >
-            Email: panditsuraj259@gmail.com
+            📧 panditsuraj259@gmail.com
           </a>
 
-          <p>Phone: +91-8390801842</p>
+          <p>📞 +91-8390801842</p>
         </div>
       </div>
 
       <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-center text-gray-400">
-        <p>©2025 Lio Fit Gym Ratnagiri. All rights reserved.</p>
+        <p>©2025 Lio-Fit Unisex Fitness Gym, Ratnagiri. All rights reserved.</p>
         <p>
           Designed & Created by Gopal Gawade
           <br />

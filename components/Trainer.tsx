@@ -28,7 +28,7 @@ export default function Trainer() {
                             alt={trainer.name}
                             height={300}
                             width={300}
-                            className="w-full h-80 object-cover object-top rounded-t-lg mb-[-21px]"
+                            className="w-full h-80 object-cover object-center rounded-t-lg mb-[-21px]"
                         />
 
                         <div className="p-6 mt-0 group-hover:bg-[#e63946] transition-colors duration-250 rounded-b-lg">

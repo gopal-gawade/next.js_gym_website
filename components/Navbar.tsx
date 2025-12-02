@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link href="/" className={`cursor-pointer`}>
             <Image
               src={'/logo.jpg'}
-              alt='Lio Fit'
+              alt='Lio-Fit'
               height={150}
               width={150}
             />
@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link href="/" className={`text-xl sm:text-2xl cursor-pointer`}>
                 <Image
                   src={'/logo.jpg'}
-                  alt='Lio Fit'
+                  alt='Lio-Fit'
                   height={150}
                   width={150}
                 />

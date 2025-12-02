@@ -9,7 +9,7 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: "Gym Services - Strength, Cardio & Personal Training in Ratnagiri",
   description:
-    "Explore Lio Fit Gym services in Ratnagiri: strength training, cardio, weight loss programs, bodybuilding, and expert personal training for all levels.",
+    "Explore Lio-Fit Gym services in Ratnagiri: strength training, cardio, weight loss programs, bodybuilding, and expert personal training for all levels.",
   alternates: { canonical: "https://liofitgymratnagiri.netlify.app/services" },
   keywords: [
     "gym services Ratnagiri",
@@ -24,10 +24,10 @@ export default function ServicesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Gym and Fitness Training",
-    provider: { "@type": "HealthClub", name: "Lio Fit Fitness Centre", url: "https://liofitgymratnagiri.netlify.app/services" },
+    provider: { "@type": "HealthClub", name: "Lio-Fit Unisex Fitness Gym", url: "https://liofitgymratnagiri.netlify.app/services" },
     areaServed: { "@type": "Place", name: "Ratnagiri, Maharashtra" },
     description:
-      "Strength training, cardio, weight loss, bodybuilding, and personal training services at Lio Fit Gym Ratnagiri."
+      "Strength training, cardio, weight loss, bodybuilding, and personal training services at Lio-Fit Gym Ratnagiri."
   };
 
   return (
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       </h1>
 
       <p className="text-gray-200 text-lg leading-relaxed">
-        At <span className="font-semibold text-white">Lio Fit Gym</span>, we provide complete fitness solutions:
+        At <span className="font-semibold text-white">Lio-Fit Gym</span>, we provide complete fitness solutions:
       </p>
 
       <ul className="space-y-3 text-lg mb-2 text-gray-300">

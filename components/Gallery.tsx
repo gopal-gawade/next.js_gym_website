@@ -26,7 +26,7 @@ export default function Gallery() {
                 Inside the
                 <Image
                     src={'/logo.jpg'}
-                    alt='Lio Fit'
+                    alt='Lio-Fit'
                     height={150}
                     width={150}
                 />

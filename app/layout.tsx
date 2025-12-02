@@ -14,12 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lio Fit Fitness Centre - Best Gym in Ratnagiri",
+  title: "Lio-Fit Unisex Fitness Gym  - Best Gym in Ratnagiri",
   description:
-    "Lio Fit Fitness Centre, Ratnagiri's top-rated unisex gym. Modern equipment, certified trainers, personalized training, weight loss, and strength programs.",
+    "Lio-Fit Unisex Fitness Gym , Ratnagiri's top-rated unisex gym. Modern equipment, certified trainers, personalized training, weight loss, and strength programs.",
   keywords: [
     "Best Gym in Ratnagiri",
-    "Lio Fit Gym Ratnagiri",
+    "Lio-Fit Gym Ratnagiri",
     "Unisex Gym Ratnagiri",
     "Fitness Centre Ratnagiri",
     "Personal Training Ratnagiri",
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     canonical: "https://liofitgymratnagiri.netlify.app/",
   },
   openGraph: {
-    title: "Lio Fit Fitness Centre - Best Gym in Ratnagiri",
+    title: "Lio-Fit Unisex Fitness Gym  - Best Gym in Ratnagiri",
     description:
       "Join Ratnagiri's #1 gym for personal training, weight loss, strength, and cardio programs. Modern equipment and certified trainers available.",
     url: "https://liofitgymratnagiri.netlify.app/",
-    siteName: "Lio Fit Fitness Centre",
+    siteName: "Lio-Fit Unisex Fitness Gym ",
     locale: "en_IN",
     type: "website",
   },
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
-    name: "Lio Fit Fitness Centre",
+    name: "Lio-Fit Unisex Fitness Gym",
     url: "https://liofitgymratnagiri.netlify.app/",
     telephone: "+918390801842",
     address: {

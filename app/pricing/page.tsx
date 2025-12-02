@@ -7,16 +7,16 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Gym Membership Pricing - Lio Fit Fitness Centre Ratnagiri",
+  title: "Gym Membership Pricing - Lio-Fit Unisex Fitness Gym Ratnagiri",
   description:
-    "Discover affordable gym membership plans in Ratnagiri with exclusive discounts—buy 3 months and get 1 free, 6 months and get 2 free, or 1 year and get 3 free. Personal training add-ons available at Lio Fit Fitness Centre.",
+    "Discover affordable gym membership plans in Ratnagiri with exclusive discounts—buy 3 months and get 1 free, 6 months and get 2 free, or 1 year and get 3 free. Personal training add-ons available at Lio-Fit Unisex Fitness Gym.",
   alternates: {
     canonical: "https://liofitgymratnagiri.netlify.app/pricing"
   },
   keywords: [
     "gym membership Ratnagiri",
     "cheap gym Ratnagiri",
-    "Lio Fit Gym pricing",
+    "Lio-Fit Gym pricing",
     "fitness packages Ratnagiri"
   ],
 };
@@ -25,14 +25,14 @@ export default function PricingPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
-    name: "Lio Fit Gym Membership Plans",
+    name: "Lio-Fit Gym Membership Plans",
     url: "https://liofitgymratnagiri.netlify.app/pricing",
   };
 
   return (
     <div className="container min-h-screen mx-auto px-6 md:px-12 py-30 flex flex-col gap-2 items-center justify-center text-white bg-black/70">
       <h1 className={`${oswald.className} text-4xl md:text-5xl font-extrabold uppercase mb-6 text-[#e63946] tracking-wide text-center`}>
-        Gym Membership Pricing - Lio Fit Gym Ratnagiri
+        Gym Membership Pricing - Lio-Fit Gym Ratnagiri
       </h1>
 
       <p className="text-gray-200 text-lg leading-relaxed">

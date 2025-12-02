@@ -18,7 +18,7 @@ export default function Hero() {
     <div className="min-h-[80vh] w-full text-white container mx-auto mt-30 md:mt-24 px-6 md:px-12 flex flex-col lg:flex-row items-stretch justify-between gap-2">
       <div className="w-full flex flex-1 flex-col justify-center">
         <p className="text-[#e63946] uppercase tracking-wide font-semibold mb-2">
-          Welcome to Lio Fit Fitness Centre
+          Welcome to Lio-Fit Unisex Fitness Gym
         </p>
 
         <h1 className={`${oswald.className} text-3xl md:text-5xl font-extrabold leading-tight uppercase`}>
